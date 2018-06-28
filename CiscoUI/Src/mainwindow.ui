@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>221</width>
+    <height>329</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(54, 54, 54);
+background-color: rgb(66, 66, 66);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>28</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+selection-background-color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(0, 170, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>Cisco Router </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InterfaceBtn">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>51</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;Interfaces</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="uploadBtn">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>290</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;Upload</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dhcpBtn">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>151</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;DHCP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="natBtn">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>150</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;NAT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="staticBtn">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>84</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>Static &amp;Route</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ospfBtn">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>116</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;OSPF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bgpBtn">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>118</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;BGP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setupBtn">
+    <property name="geometry">
+     <rect>
+      <x>122</x>
+      <y>52</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;Setup</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="eigrpBtn">
+    <property name="geometry">
+     <rect>
+      <x>122</x>
+      <y>84</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>&amp;EIGRP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="alcBtn">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>183</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>AC&amp;L</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>toolButton</tabstop>
+  <tabstop>InterfaceBtn</tabstop>
+  <tabstop>uploadBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
