@@ -38,6 +38,7 @@ public:
     QPushButton *setupBtn;
     QPushButton *eigrpBtn;
     QPushButton *alcBtn;
+    QPushButton *settingsBtn;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -144,6 +145,13 @@ public:
         alcBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
 "border-color: rgb(0, 0, 0);\n"
 "background-color: rgb(66, 66, 66);"));
+        settingsBtn = new QPushButton(centralWidget);
+        settingsBtn->setObjectName(QStringLiteral("settingsBtn"));
+        settingsBtn->setGeometry(QRect(10, 290, 80, 25));
+        settingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        settingsBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
         MainWindow->setCentralWidget(centralWidget);
         QWidget::setTabOrder(toolButton, InterfaceBtn);
         QWidget::setTabOrder(InterfaceBtn, uploadBtn);
@@ -168,6 +176,7 @@ public:
         setupBtn->setText(QApplication::translate("MainWindow", "&Setup", Q_NULLPTR));
         eigrpBtn->setText(QApplication::translate("MainWindow", "&EIGRP", Q_NULLPTR));
         alcBtn->setText(QApplication::translate("MainWindow", "AC&L", Q_NULLPTR));
+        settingsBtn->setText(QApplication::translate("MainWindow", "Se&ttings", Q_NULLPTR));
     } // retranslateUi
 
 };

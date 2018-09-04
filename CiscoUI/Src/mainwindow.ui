@@ -288,6 +288,27 @@ background-color: rgb(66, 66, 66);</string>
      <string>AC&amp;L</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="settingsBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);</string>
+    </property>
+    <property name="text">
+     <string>Se&amp;ttings</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

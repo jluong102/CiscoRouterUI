@@ -8,12 +8,12 @@ namespace Ui {
 class Ospf;
 }
 
-class Ospf : public QWidget
+class Ospf : public QWidget, public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit Ospf(QWidget *parent = 0);
+    explicit Ospf(QWidget *parent = nullptr);
     ~Ospf();
 
 private slots:

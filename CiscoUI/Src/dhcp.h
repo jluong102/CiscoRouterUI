@@ -9,12 +9,12 @@ namespace Ui {
 class Dhcp;
 }
 
-class Dhcp : public QWidget
+class Dhcp : public QWidget , public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit Dhcp(QWidget *parent = 0);
+    explicit Dhcp(QWidget *parent = nullptr);
     ~Dhcp();
 
 private slots:

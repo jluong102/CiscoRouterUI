@@ -57,6 +57,9 @@ bool StaticRoute::CheckAddress()
             ui->subBox3->text() == NULL ||
             ui->subBox4->text() == NULL)
         return false;
+    else if (CheckSubnet(ui->ipBox1->text().toShort(), ui->ipBox2->text().toShort(),
+                         ui->ipBox3->text().toShort(), ui->ipBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -146,7 +149,6 @@ std::string StaticRoute::Upload()
     addString += "Ip Route " + GetAddress();
     addString += Basic::Logout();
 
-    StaticRouteSet = true;
     return addString;
 }
 
@@ -164,19 +166,19 @@ void StaticRoute::on_configBtn_clicked() //Calls Upload
 {
     if (!CheckAddress() || EmptyAddress())
     {
-        errBox->information(NULL, "Error", "Invalid Ip Address or Subnet");
+        errBox->information(nullptr, "Error", "Invalid Ip Address or Subnet");
         return;
     }
     else if (ui->intBtn->isChecked() && ui->intBtn->text() == NULL)
     {
-        errBox->information(NULL, "Error", "Invalid Interface");
+        errBox->information(nullptr, "Error", "Invalid Interface");
         return;
     }
 
     ConfigStore += Upload();
     ClearBox();
 }
-
+///////////
 void StaticRoute::on_intBtn_clicked()   //Makes sure correct radio button is checked
 {
     SwitchBox();
@@ -198,3 +200,4 @@ void StaticRoute::on_ipBtn_clicked()
         ui->intBtn->setChecked(false);
     }
 }
+////////////

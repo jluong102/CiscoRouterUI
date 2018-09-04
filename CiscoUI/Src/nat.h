@@ -9,12 +9,12 @@ namespace Ui {
 class Nat;
 }
 
-class Nat : public QWidget
+class Nat : public QWidget, public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit Nat(QWidget *parent = 0);
+    explicit Nat(QWidget *parent = nullptr);
     ~Nat();
 
 private slots:

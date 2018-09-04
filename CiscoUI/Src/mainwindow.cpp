@@ -27,6 +27,7 @@ MainWindow::~MainWindow()
     delete dhcpFrm;
     delete natFrm;
     delete aclFrm;
+    delete settingsFrm;
 }
 
 void MainWindow::on_toolButton_clicked()
@@ -38,7 +39,7 @@ void MainWindow::on_uploadBtn_clicked()
 {
     QMessageBox msgUpload;
     SendConfig();
-    msgUpload.information(0, "Upload Complete", "Config Uploaded");
+    msgUpload.information(nullptr, "Upload Complete", "Config Uploaded");
 }
 
 void MainWindow::on_InterfaceBtn_clicked()
@@ -93,4 +94,9 @@ void MainWindow::on_alcBtn_clicked()
 {
     //aclFrm = new Acl();
     aclFrm->show();
+}
+
+void MainWindow::on_settingsBtn_clicked()
+{
+    settingsFrm->show();
 }

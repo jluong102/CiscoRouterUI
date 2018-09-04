@@ -93,6 +93,9 @@ bool Eigrp::CheckWild()
             ui->wildBox3->text().toUShort() > 255 ||
             ui->wildBox4->text().toUShort() > 255)
         return false;
+    else if (!CheckWildCard(ui->wildBox1->text().toShort(), ui->wildBox2->text().toShort(),
+                            ui->wildBox3->text().toShort(), ui->wildBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -249,27 +252,27 @@ void Eigrp::on_configBtn_clicked()      //Add Config
 {
     if (!CheckAsNum())
     {
-        errBox.information(0, "Error", "Invalid AS Number");
+        errBox.information(nullptr, "Error", "Invalid AS Number");
         return;
     }
     else if (ui->asNumBox->text() == NULL)
     {
-        errBox.information(0, "Error", "Must have an AS Number");
+        errBox.information(nullptr, "Error", "Must have an AS Number");
         return;
     }
     else if (!CheckWild() && !EmptyWild())
     {
-        errBox.information(0, "Error", "Invaild Wild Card");
+        errBox.information(nullptr, "Error", "Invaild Wild Card");
         return;
     }
     else if (!CheckAddress() && !EmptyAddress())
     {
-        errBox.information(0, "Error", "Invaild Network Address");
+        errBox.information(nullptr, "Error", "Invaild Network Address");
         return;
     }
     else if (!CheckVariance())
     {
-        errBox.information(0, "Error", "Invaild Variance Number");
+        errBox.information(nullptr, "Error", "Invaild Variance Number");
         return;
     }
 
@@ -305,7 +308,7 @@ void Eigrp::on_addPassBtn_clicked()
     }
     else
     {
-        errBox.information(0, "Error", "Invalid Interface");
+        errBox.information(nullptr, "Error", "Invalid Interface");
     }
 }
 
@@ -325,7 +328,7 @@ void Eigrp::on_removePassBtn_clicked()
     }
     else
     {
-        errBox.information(0, "Error", "Invalid Interface");
+        errBox.information(nullptr, "Error", "Invalid Interface");
     }
 }
 //////////////////////////////////////////////

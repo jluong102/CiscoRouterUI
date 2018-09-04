@@ -70,7 +70,7 @@ public:
         Ospf->setStyleSheet(QLatin1String("gridline-color: rgb(0, 0, 0);\n"
 "background-color: rgb(70, 70, 70);\n"
 "alternate-background-color: rgb(0, 0, 0);\n"
-"border-color: rgb(0, 0, 0);\n"
+"border-color: rgb(22, 22, 22);\n"
 "selection-color: rgb(0, 85, 255);\n"
 "selection-background-color: rgb(0, 0, 127);"));
         label = new QLabel(Ospf);

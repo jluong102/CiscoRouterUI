@@ -8,12 +8,12 @@ namespace Ui {
 class Interface;
 }
 
-class Interface : public QWidget
+class Interface : public QWidget, public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit Interface(QWidget *parent = 0);
+    explicit Interface(QWidget *parent = nullptr);
     ~Interface();
 
 private slots:

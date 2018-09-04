@@ -71,6 +71,9 @@ bool Interface::CheckAddress()
             ui->subBox3->text() == NULL ||
             ui->subBox4->text() == NULL)
         return false;
+    else if (!CheckSubnet(ui->subBox1->text().toShort(), ui->subBox2->text().toShort(),
+                      ui->subBox3->text().toShort(), ui->subBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -127,42 +130,62 @@ std::string Interface::Upload()  //Sets Data
     if (ui->clockCheck->isChecked() == true)
     {
         addString += "Clock Rate ";
-        if (ui->clockCombo->currentIndex() == 0)
+        switch (ui->clockCombo->currentIndex())
+        {
+        case 0:
             addString += "1200\n";
-        else if (ui->clockCombo->currentIndex() == 1)
+            break;
+        case 1:
             addString += "2400\n";
-        else if (ui->clockCombo->currentIndex() == 2)
+            break;
+        case 2:
             addString += "4800\n";
-        else if (ui->clockCombo->currentIndex() == 3)
+            break;
+        case 3:
             addString += "9600\n";
-        else if (ui->clockCombo->currentIndex() == 4)
+            break;
+        case 4:
             addString += "19200\n";
-        else if (ui->clockCombo->currentIndex() == 5)
+            break;
+        case 5:
             addString += "38400\n";
-        else if (ui->clockCombo->currentIndex() == 6)
+            break;
+        case 6:
             addString += "56000\n";
-        else if (ui->clockCombo->currentIndex() == 7)
+            break;
+        case 7:
             addString += "64000\n";
-        else if (ui->clockCombo->currentIndex() == 8)
+            break;
+        case 8:
             addString += "72000\n";
-        else if (ui->clockCombo->currentIndex() == 9)
+            break;
+        case 9:
             addString += "125000\n";
-        else if (ui->clockCombo->currentIndex() == 10)
+            break;
+        case 10:
             addString += "148000\n";
-        else if (ui->clockCombo->currentIndex() == 11)
+            break;
+        case 11:
             addString += "250000\n";
-        else if (ui->clockCombo->currentIndex() == 12)
+            break;
+        case 12:
             addString += "500000\n";
-        else if (ui->clockCombo->currentIndex() == 13)
+            break;
+        case 13:
             addString += "800000\n";
-        else if (ui->clockCombo->currentIndex() == 14)
+            break;
+        case 14:
             addString += "1000000\n";
-        else if (ui->clockCombo->currentIndex() == 15)
+            break;
+        case 15:
             addString += "1300000\n";
-        else if (ui->clockCombo->currentIndex() == 16)
+            break;
+        case 16:
             addString += "2000000\n";
-        else
+            break;
+        default:
             addString += "4000000\n";
+        }
 
     }
 
@@ -183,12 +206,12 @@ void Interface::on_configBtn_clicked() //Run Checks Before Upload
 {
     if (!ValidInterface())
     {
-      errBox.information(0, "Error", "Invalid Interface");
+      errBox.information(nullptr, "Error", "Invalid Interface");
       return;
     }
     else if (!CheckAddress() && !EmptyAddress())
     {
-       errBox.information(0, "Error", "Invalid Ip Address or Subnet");
+       errBox.information(nullptr, "Error", "Invalid Ip Address or Subnet");
        return;
     }
 

@@ -8,12 +8,12 @@ namespace Ui {
 class Eigrp;
 }
 
-class Eigrp : public QWidget
+class Eigrp : public QWidget, public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit Eigrp(QWidget *parent = 0);
+    explicit Eigrp(QWidget *parent = nullptr);
     ~Eigrp();
 
 private slots:

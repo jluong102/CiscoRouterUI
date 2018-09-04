@@ -13,6 +13,7 @@
 #include "dhcp.h"
 #include "nat.h"
 #include "acl.h"
+#include "settings.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,7 +24,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -49,6 +50,8 @@ private slots:
 
     void on_alcBtn_clicked();
 
+    void on_settingsBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Interface* interFrm = new Interface();
@@ -60,6 +63,7 @@ private:
     Dhcp* dhcpFrm = new Dhcp();
     Nat* natFrm = new Nat();
     Acl* aclFrm = new Acl();
+    Settings* settingsFrm = new Settings();
 };
 
 #endif // MAINWINDOW_H

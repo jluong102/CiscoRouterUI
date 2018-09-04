@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Acl</class>
+ <widget class="QWidget" name="Acl">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">gridline-color: rgb(0, 0, 0);
+selection-color: rgb(0, 170, 255);
+selection-background-color: rgb(66, 66, 66);
+background-color: rgb(70, 70, 70);
+alternate-background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QPushButton" name="configBtn">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>270</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 170, 255);
+background-color: rgb(66, 66, 66);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Configure</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearBtn">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>270</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 170, 255);
+background-color: rgb(66, 66, 66);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitBtn">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>270</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 170, 255);
+background-color: rgb(66, 66, 66);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Done</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :rgb(0, 170, 255)</string>
+   </property>
+   <property name="text">
+    <string>ACL Number</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="aclBox">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>20</y>
+     <width>51</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipBox1">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>80</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="wildBox3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipBox2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipBox4">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="wildBox1">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>120</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>82</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :rgb(0, 170, 255)</string>
+   </property>
+   <property name="text">
+    <string>Source</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>122</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :rgb(0, 170, 255)</string>
+   </property>
+   <property name="text">
+    <string>Wildcard</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="wildBox2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>120</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="wildBox4">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipBox3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>31</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="permitCheck">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);
+alternate-background-color: rgb(66, 66, 66);
+selection-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Permit</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="denyCheck">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>50</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :rgb(0, 170, 255);
+border-color: rgb(0, 0, 0);
+background-color: rgb(66, 66, 66);
+alternate-background-color: rgb(66, 66, 66);
+selection-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Deny</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="hostCheck">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>80</y>
+     <width>85</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Host</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="anyCheck">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>120</y>
+     <width>85</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Any</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="disableCheck">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>20</y>
+     <width>85</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 170, 255);
+border-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Disable</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>aclBox</tabstop>
+  <tabstop>disableCheck</tabstop>
+  <tabstop>permitCheck</tabstop>
+  <tabstop>denyCheck</tabstop>
+  <tabstop>ipBox1</tabstop>
+  <tabstop>ipBox2</tabstop>
+  <tabstop>ipBox3</tabstop>
+  <tabstop>ipBox4</tabstop>
+  <tabstop>wildBox1</tabstop>
+  <tabstop>wildBox2</tabstop>
+  <tabstop>wildBox3</tabstop>
+  <tabstop>wildBox4</tabstop>
+  <tabstop>hostCheck</tabstop>
+  <tabstop>anyCheck</tabstop>
+  <tabstop>clearBtn</tabstop>
+  <tabstop>configBtn</tabstop>
+  <tabstop>exitBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -123,6 +123,9 @@ bool Dhcp::CheckNetwork()
             ui->subBox3->text().toShort() < 0  ||
             ui->subBox4->text().toShort() < 0)
         return false;
+    else if (!CheckSubnet(ui->subBox1->text().toShort(), ui->subBox2->text().toShort(),
+                          ui->subBox3->text().toShort(), ui->subBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -210,6 +213,9 @@ bool Dhcp::CheckExclude()
             ui->exSubBox2->text().toShort() < 0  ||
             ui->exSubBox3->text().toShort() < 0  ||
             ui->exSubBox4->text().toShort() < 0)
+        return false;
+    else if (!CheckSubnet(ui->exSubBox1->text().toShort(), ui->exSubBox2->text().toShort(),
+                          ui->exSubBox3->text().toShort(), ui->exSubBox4->text().toShort()))
         return false;
     else
         return true;
@@ -418,29 +424,29 @@ void Dhcp::on_configBtn_clicked()
 {
     if(EmptyName())
     {
-        errBox.information(0, "Error", "DHCP Name Required");
+        errBox.information(nullptr, "Error", "DHCP Name Required");
         return;
     }
     else if(!CheckNetwork() && !EmptyNetwork())
     {
-        errBox.information(0, "Error", "Invaild Network Address or Subnet");
+        errBox.information(nullptr, "Error", "Invaild Network Address or Subnet");
         return;
     }
     else if (!CheckDefRouter() && !EmptyDefRouter())
     {
-        errBox.information(0, "Error", "Invaild Default Router");
+        errBox.information(nullptr, "Error", "Invaild Default Router");
         return;
     }
     else if (!CheckBios() && !EmptyBios())
 
     {
-        errBox.information(0, "Error", "Invaild NetBIOS");
+        errBox.information(nullptr, "Error", "Invaild NetBIOS");
         return;
     }
     else if (!CheckLease() && !EmptyLease())
 
     {
-        errBox.information(0, "Error", "Invaild Lease Time");
+        errBox.information(nullptr, "Error", "Invaild Lease Time");
         return;
     }
 

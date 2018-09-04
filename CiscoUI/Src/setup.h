@@ -13,7 +13,7 @@ class Setup : public QWidget
     Q_OBJECT
 
 public:
-    explicit Setup(QWidget *parent = 0);
+    explicit Setup(QWidget *parent = nullptr);
     ~Setup();
 
 private slots:

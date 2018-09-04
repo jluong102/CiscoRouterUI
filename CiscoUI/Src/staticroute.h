@@ -8,12 +8,12 @@ namespace Ui {
 class StaticRoute;
 }
 
-class StaticRoute : public QWidget
+class StaticRoute : public QWidget, public Check::AddressChecks
 {
     Q_OBJECT
 
 public:
-    explicit StaticRoute(QWidget *parent = 0);
+    explicit StaticRoute(QWidget *parent = nullptr);
     ~StaticRoute();
 
 private slots:

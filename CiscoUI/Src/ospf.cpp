@@ -95,6 +95,9 @@ bool Ospf::CheckWild()
             ui->wildBox3->text() == NULL ||
             ui->wildBox4->text() == NULL)
         return false;
+    else if (CheckWildCard(ui->wildBox1->text().toShort(), ui->wildBox2->text().toShort(),
+             ui->wildBox3->text().toShort(), ui->wildBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -255,34 +258,34 @@ void Ospf::on_configBtn_clicked()
 {
     if(!CheckProcId())      //Checks
     {
-        errBox.information(0, "Error", "Invaild Process ID");
+        errBox.information(nullptr, "Error", "Invaild Process ID");
         return;
     }
     else if (EmptyProcId())
     {
-        errBox.information(0, "Error", "Must Have Process ID");
+        errBox.information(nullptr, "Error", "Must Have Process ID");
         return;
     }
     else if (!CheckAddress() && !EmptyAddress())
     {
-        errBox.information(0, "Error", "Invaild Network Address");
+        errBox.information(nullptr, "Error", "Invaild Network Address");
         return;
     }
     else if (!CheckWild() && !EmptyWild())
     {
-        errBox.information(0, "Error", "Invaild Wildcard");
+        errBox.information(nullptr, "Error", "Invaild Wildcard");
         return;
     }
     else if (!CheckArea() && !EmptyArea())
     {
-        errBox.information(0, "Error", "Invaild Area ID");
+        errBox.information(nullptr, "Error", "Invaild Area ID");
         return;
     }
     else if (!EmptyAddress() || !EmptyArea() || !EmptyProcId())
     {
         if (EmptyAddress() || EmptyArea() || EmptyProcId())
         {
-            errBox.information(0, "Error", "Incomplete Information");
+            errBox.information(nullptr, "Error", "Incomplete Information");
             return;
         }
     }
@@ -355,7 +358,7 @@ void Ospf::on_removePassBtn_clicked()
     }
     else
     {
-        errBox.information(0, "Error", "Invaild Interface");
+        errBox.information(nullptr, "Error", "Invaild Interface");
         return;
     }
 

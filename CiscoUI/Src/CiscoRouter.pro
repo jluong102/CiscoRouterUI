@@ -40,7 +40,9 @@ SOURCES += \
     bgp.cpp \
     dhcp.cpp \
     nat.cpp \
-    acl.cpp
+    acl.cpp \
+    settings.cpp \
+    addresschecks.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -54,7 +56,9 @@ HEADERS += \
     bgp.h \
     dhcp.h \
     nat.h \
-    acl.h
+    acl.h \
+    settings.h \
+    addresschecks.h
 
 FORMS += \
         mainwindow.ui \
@@ -66,4 +70,5 @@ FORMS += \
     bgp.ui \
     dhcp.ui \
     nat.ui \
-    acl.ui
+    acl.ui \
+    settings.ui

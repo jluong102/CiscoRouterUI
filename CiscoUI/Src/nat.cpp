@@ -98,6 +98,9 @@ bool Nat::CheckSub()
             ui->subBox3->text().toShort() < 0 ||
             ui->subBox4->text().toShort() < 0)
         return false;
+    else if (!CheckSubnet(ui->subBox1->text().toShort(), ui->subBox2->text().toShort(),
+                          ui->subBox3->text().toShort(), ui->subBox4->text().toShort()))
+        return false;
     else
         return true;
 }
@@ -158,27 +161,27 @@ void Nat::on_configBtn_clicked()
 {
     if (ui->nameBox->text() == NULL)
     {
-        errBox.information(0, "Error", "Invaild Address Pool Name");
+        errBox.information(nullptr, "Error", "Invaild Address Pool Name");
         return;
     }
     else if (!CheckStart())
     {
-        errBox.information(0, "Error", "Invaild Start Address");
+        errBox.information(nullptr, "Error", "Invaild Start Address");
         return;
     }
     else if (!CheckEnd())
     {
-        errBox.information(0, "Error", "Invaild End Address");
+        errBox.information(nullptr, "Error", "Invaild End Address");
         return;
     }
     else if (!CheckSub())
     {
-        errBox.information(0, "Error", "Invaild Subnet");
+        errBox.information(nullptr, "Error", "Invaild Subnet");
         return;
     }
     else if (!CheckLink() && !EmptyLink())
     {
-        errBox.information(0, "Error", "Invaild ACL");
+        errBox.information(nullptr, "Error", "Invaild ACL");
         return;
     }
 
