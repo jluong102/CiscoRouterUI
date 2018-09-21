@@ -416,7 +416,7 @@ std::string Dhcp::Upload()
     else
         addString += "Service DHCP\n";
 
-    addString += Basic::Logout();
+    addString += Basic::LastMode();
     return addString;
 }
 
