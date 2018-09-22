@@ -1,3 +1,8 @@
+9/21/2018
+-Changed code to not exit global configuration 
+-Added subinterface options for router on a stick
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Added more address checking
 -Added a splash screen
 -Improved settings options
