@@ -130,7 +130,7 @@ std::string Setup::Upload() //Makes String to add to config
         addString += "No Ip Domain-Lookup\n";
 
 
-    addString += Basic::Logout();
+    addString += Basic::LastMode();
     return addString;
 }
 

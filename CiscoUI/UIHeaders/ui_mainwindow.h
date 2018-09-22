@@ -18,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QToolButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,17 +29,22 @@ public:
     QWidget *centralWidget;
     QToolButton *toolButton;
     QLabel *label;
-    QPushButton *InterfaceBtn;
     QPushButton *uploadBtn;
-    QPushButton *dhcpBtn;
-    QPushButton *natBtn;
-    QPushButton *staticBtn;
-    QPushButton *ospfBtn;
-    QPushButton *bgpBtn;
+    QPushButton *settingsBtn;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *SubInterfaceBtn;
     QPushButton *setupBtn;
     QPushButton *eigrpBtn;
+    QPushButton *bgpBtn;
+    QPushButton *natBtn;
+    QWidget *widget1;
+    QVBoxLayout *verticalLayout_2;
+    QPushButton *InterfaceBtn;
+    QPushButton *staticBtn;
+    QPushButton *ospfBtn;
+    QPushButton *dhcpBtn;
     QPushButton *alcBtn;
-    QPushButton *settingsBtn;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -75,74 +81,11 @@ public:
         label->setStyleSheet(QLatin1String("\n"
 "color: rgb(0, 170, 255);\n"
 ""));
-        InterfaceBtn = new QPushButton(centralWidget);
-        InterfaceBtn->setObjectName(QStringLiteral("InterfaceBtn"));
-        InterfaceBtn->setGeometry(QRect(11, 51, 80, 25));
-        InterfaceBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        InterfaceBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
         uploadBtn = new QPushButton(centralWidget);
         uploadBtn->setObjectName(QStringLiteral("uploadBtn"));
         uploadBtn->setGeometry(QRect(120, 290, 80, 25));
         uploadBtn->setCursor(QCursor(Qt::PointingHandCursor));
         uploadBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        dhcpBtn = new QPushButton(centralWidget);
-        dhcpBtn->setObjectName(QStringLiteral("dhcpBtn"));
-        dhcpBtn->setGeometry(QRect(11, 151, 80, 25));
-        dhcpBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        dhcpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        natBtn = new QPushButton(centralWidget);
-        natBtn->setObjectName(QStringLiteral("natBtn"));
-        natBtn->setGeometry(QRect(121, 150, 80, 25));
-        natBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        natBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        staticBtn = new QPushButton(centralWidget);
-        staticBtn->setObjectName(QStringLiteral("staticBtn"));
-        staticBtn->setGeometry(QRect(11, 84, 80, 25));
-        staticBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        staticBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        ospfBtn = new QPushButton(centralWidget);
-        ospfBtn->setObjectName(QStringLiteral("ospfBtn"));
-        ospfBtn->setGeometry(QRect(11, 116, 80, 25));
-        ospfBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        ospfBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        bgpBtn = new QPushButton(centralWidget);
-        bgpBtn->setObjectName(QStringLiteral("bgpBtn"));
-        bgpBtn->setGeometry(QRect(121, 118, 80, 25));
-        bgpBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        bgpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        setupBtn = new QPushButton(centralWidget);
-        setupBtn->setObjectName(QStringLiteral("setupBtn"));
-        setupBtn->setGeometry(QRect(122, 52, 80, 25));
-        setupBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        setupBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        eigrpBtn = new QPushButton(centralWidget);
-        eigrpBtn->setObjectName(QStringLiteral("eigrpBtn"));
-        eigrpBtn->setGeometry(QRect(122, 84, 80, 25));
-        eigrpBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        eigrpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(66, 66, 66);"));
-        alcBtn = new QPushButton(centralWidget);
-        alcBtn->setObjectName(QStringLiteral("alcBtn"));
-        alcBtn->setGeometry(QRect(11, 183, 80, 25));
-        alcBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        alcBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
 "border-color: rgb(0, 0, 0);\n"
 "background-color: rgb(66, 66, 66);"));
         settingsBtn = new QPushButton(centralWidget);
@@ -152,6 +95,112 @@ public:
         settingsBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
 "border-color: rgb(0, 0, 0);\n"
 "background-color: rgb(66, 66, 66);"));
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(119, 50, 83, 155));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        SubInterfaceBtn = new QPushButton(widget);
+        SubInterfaceBtn->setObjectName(QStringLiteral("SubInterfaceBtn"));
+        SubInterfaceBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        SubInterfaceBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout->addWidget(SubInterfaceBtn);
+
+        setupBtn = new QPushButton(widget);
+        setupBtn->setObjectName(QStringLiteral("setupBtn"));
+        setupBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        setupBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout->addWidget(setupBtn);
+
+        eigrpBtn = new QPushButton(widget);
+        eigrpBtn->setObjectName(QStringLiteral("eigrpBtn"));
+        eigrpBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        eigrpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout->addWidget(eigrpBtn);
+
+        bgpBtn = new QPushButton(widget);
+        bgpBtn->setObjectName(QStringLiteral("bgpBtn"));
+        bgpBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        bgpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout->addWidget(bgpBtn);
+
+        natBtn = new QPushButton(widget);
+        natBtn->setObjectName(QStringLiteral("natBtn"));
+        natBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        natBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout->addWidget(natBtn);
+
+        widget1 = new QWidget(centralWidget);
+        widget1->setObjectName(QStringLiteral("widget1"));
+        widget1->setGeometry(QRect(11, 51, 82, 155));
+        verticalLayout_2 = new QVBoxLayout(widget1);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        InterfaceBtn = new QPushButton(widget1);
+        InterfaceBtn->setObjectName(QStringLiteral("InterfaceBtn"));
+        InterfaceBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        InterfaceBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout_2->addWidget(InterfaceBtn);
+
+        staticBtn = new QPushButton(widget1);
+        staticBtn->setObjectName(QStringLiteral("staticBtn"));
+        staticBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        staticBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout_2->addWidget(staticBtn);
+
+        ospfBtn = new QPushButton(widget1);
+        ospfBtn->setObjectName(QStringLiteral("ospfBtn"));
+        ospfBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        ospfBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout_2->addWidget(ospfBtn);
+
+        dhcpBtn = new QPushButton(widget1);
+        dhcpBtn->setObjectName(QStringLiteral("dhcpBtn"));
+        dhcpBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        dhcpBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout_2->addWidget(dhcpBtn);
+
+        alcBtn = new QPushButton(widget1);
+        alcBtn->setObjectName(QStringLiteral("alcBtn"));
+        alcBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        alcBtn->setStyleSheet(QLatin1String("color: rgb(0, 170, 255);\n"
+"border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(66, 66, 66);"));
+
+        verticalLayout_2->addWidget(alcBtn);
+
         MainWindow->setCentralWidget(centralWidget);
         QWidget::setTabOrder(toolButton, InterfaceBtn);
         QWidget::setTabOrder(InterfaceBtn, uploadBtn);
@@ -166,17 +215,18 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         toolButton->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Cisco Router ", Q_NULLPTR));
-        InterfaceBtn->setText(QApplication::translate("MainWindow", "&Interfaces", Q_NULLPTR));
         uploadBtn->setText(QApplication::translate("MainWindow", "&Upload", Q_NULLPTR));
-        dhcpBtn->setText(QApplication::translate("MainWindow", "&DHCP", Q_NULLPTR));
-        natBtn->setText(QApplication::translate("MainWindow", "&NAT", Q_NULLPTR));
-        staticBtn->setText(QApplication::translate("MainWindow", "Static &Route", Q_NULLPTR));
-        ospfBtn->setText(QApplication::translate("MainWindow", "&OSPF", Q_NULLPTR));
-        bgpBtn->setText(QApplication::translate("MainWindow", "&BGP", Q_NULLPTR));
+        settingsBtn->setText(QApplication::translate("MainWindow", "Se&ttings", Q_NULLPTR));
+        SubInterfaceBtn->setText(QApplication::translate("MainWindow", "Su&binterface", Q_NULLPTR));
         setupBtn->setText(QApplication::translate("MainWindow", "&Setup", Q_NULLPTR));
         eigrpBtn->setText(QApplication::translate("MainWindow", "&EIGRP", Q_NULLPTR));
+        bgpBtn->setText(QApplication::translate("MainWindow", "&BGP", Q_NULLPTR));
+        natBtn->setText(QApplication::translate("MainWindow", "&NAT", Q_NULLPTR));
+        InterfaceBtn->setText(QApplication::translate("MainWindow", "&Interfaces", Q_NULLPTR));
+        staticBtn->setText(QApplication::translate("MainWindow", "Static &Route", Q_NULLPTR));
+        ospfBtn->setText(QApplication::translate("MainWindow", "&OSPF", Q_NULLPTR));
+        dhcpBtn->setText(QApplication::translate("MainWindow", "&DHCP", Q_NULLPTR));
         alcBtn->setText(QApplication::translate("MainWindow", "AC&L", Q_NULLPTR));
-        settingsBtn->setText(QApplication::translate("MainWindow", "Se&ttings", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -234,7 +234,7 @@ std::string Eigrp::Upload()
     else
         addString += "No Eigrp Log-Neighbor-changes\n";
 
-    addString += Basic::LastMode() + Basic::Logout();
+    addString += Basic::Logout();
     return addString;
 }
 

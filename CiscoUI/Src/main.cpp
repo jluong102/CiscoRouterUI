@@ -1,4 +1,4 @@
-//Last Updated 8/24/18
+//Last Updated 9/21/18
 #include "mainwindow.h"
 #include <QApplication>
 #include <QSplashScreen>

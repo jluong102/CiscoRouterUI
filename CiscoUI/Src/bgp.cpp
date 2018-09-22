@@ -221,7 +221,6 @@ std::string Bgp::Upload()
         addString += "\n";
     }
 
-    addString += Basic::LastMode();
     addString += Basic::Logout();
     return addString;
 }

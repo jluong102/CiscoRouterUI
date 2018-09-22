@@ -147,7 +147,7 @@ std::string StaticRoute::Upload()
     addString += "!Static Route!\n";
     addString += Basic::GlobalConfig();
     addString += "Ip Route " + GetAddress();
-    addString += Basic::Logout();
+    addString += Basic::LastMode();
 
     return addString;
 }

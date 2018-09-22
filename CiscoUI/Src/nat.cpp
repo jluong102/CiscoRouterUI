@@ -153,7 +153,7 @@ std::string Nat::Upload()
     if (!EmptyLink())
         addString += "Ip NAT Inside Source List " + ui->aclBox->text().toStdString() + " Pool " + ui->nameBox->text().toStdString() + "\n";
 
-    addString += Basic::Logout();
+    addString += Basic::LastMode();
     return addString;
 }
 

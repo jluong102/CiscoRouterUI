@@ -190,7 +190,7 @@ std::string Interface::Upload()  //Sets Data
     }
 
 
-    addString += Basic::LastMode() + Basic::Logout();
+    addString += Basic::Logout();
     return addString;
 }
 

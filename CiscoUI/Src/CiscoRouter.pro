@@ -42,7 +42,8 @@ SOURCES += \
     nat.cpp \
     acl.cpp \
     settings.cpp \
-    addresschecks.cpp
+    addresschecks.cpp \
+    SubInterface.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -58,7 +59,8 @@ HEADERS += \
     nat.h \
     acl.h \
     settings.h \
-    addresschecks.h
+    addresschecks.h \
+    SubInterface.h
 
 FORMS += \
         mainwindow.ui \
@@ -71,4 +73,5 @@ FORMS += \
     dhcp.ui \
     nat.ui \
     acl.ui \
-    settings.ui
+    settings.ui \
+    SubInterface.ui

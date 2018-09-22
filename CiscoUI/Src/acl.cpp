@@ -179,7 +179,7 @@ std::string Acl::Upload()
     addString += Basic::GlobalConfig();
 
     if (ui->disableCheck->isChecked())
-        return addString + "No Access-List " + ui->aclBox->text().toStdString() + "\n" + Basic::Logout();
+        return addString + "No Access-List " + ui->aclBox->text().toStdString() + "\n" + Basic::LastMode();
 
     addString += "Access-List " + ui->aclBox->text().toStdString();
     AclList.push_back(ui->aclBox->text().toUShort());// <- For Link Check
@@ -200,7 +200,7 @@ std::string Acl::Upload()
         addString += GetWild();
 
     addString += "\n";
-    addString += Basic::Logout();
+    addString += Basic::LastMode();
     return addString;
 }
 

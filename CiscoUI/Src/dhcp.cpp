@@ -373,7 +373,7 @@ std::string Dhcp::GetExList()
 
     for (auto i : excludeList)
     {
-        exStr += "Ip DHCP Excluded-Address " + i + "\n";
+        exStr += "IP DHCP Excluded-Address " + i + "\n";
     }
     excludeList.clear(); //Clears List to Avoid Repeats
 
@@ -389,7 +389,7 @@ std::string Dhcp::Upload()
 
     if (ui->disableCheck->isChecked())
         return addString += "No Ip DHCP Pool " + ui->nameBox->text().toStdString() + "\n" + Basic::Logout();
-    addString += "Ip DHCP Pool " + ui->nameBox->text().toStdString() + "\n";
+    addString += "IP DHCP Pool " + ui->nameBox->text().toStdString() + "\n";
 
     if (!EmptyNetwork())
         addString += "Network " + GetNetwork() + "\n";

@@ -2,11 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "Global.h"
+#include "global.h"
 #include "interface.h"
 #include "config.h"
 #include "setup.h"
-#include "StaticRoute.h"
+#include "staticroute.h"
 #include "eigrp.h"
 #include "ospf.h"
 #include "bgp.h"
@@ -14,6 +14,7 @@
 #include "nat.h"
 #include "acl.h"
 #include "settings.h"
+#include "SubInterface.h"
 
 namespace Ui {
 class MainWindow;
@@ -52,6 +53,8 @@ private slots:
 
     void on_settingsBtn_clicked();
 
+    void on_SubInterfaceBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Interface* interFrm = new Interface();
@@ -64,6 +67,7 @@ private:
     Nat* natFrm = new Nat();
     Acl* aclFrm = new Acl();
     Settings* settingsFrm = new Settings();
+    SubInterface* subIntFrm = new SubInterface();
 };
 
 #endif // MAINWINDOW_H

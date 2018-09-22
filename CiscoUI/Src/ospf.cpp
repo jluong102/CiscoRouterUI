@@ -216,7 +216,7 @@ std::string Ospf::Upload()
         if (ui->disableCheck->isChecked())
         {
             addString += "No Network " + GetAddress() + "Area " + ui->areaBox->text().toStdString() + "\n";
-            return addString + Basic::LastMode() + Basic::Logout();
+            return addString += Basic::Logout();
         }
         else
         {
@@ -249,7 +249,6 @@ std::string Ospf::Upload()
     else
         addString += "No Default-Informaiton Orginate\n";
 
-    addString += Basic::LastMode();
     addString += Basic::Logout();
     return addString;
 }

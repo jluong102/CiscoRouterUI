@@ -28,6 +28,7 @@ MainWindow::~MainWindow()
     delete natFrm;
     delete aclFrm;
     delete settingsFrm;
+    delete subIntFrm;
 }
 
 void MainWindow::on_toolButton_clicked()
@@ -99,4 +100,9 @@ void MainWindow::on_alcBtn_clicked()
 void MainWindow::on_settingsBtn_clicked()
 {
     settingsFrm->show();
+}
+
+void MainWindow::on_SubInterfaceBtn_clicked()
+{
+    subIntFrm->show();
 }
