@@ -1,4 +1,4 @@
-Simple Cisco Router Made in QT Editor.
+Simple Cisco Router GUI Made in QT Editor.
 
 Adds configuration to a text file, will probably add ability upload config through console port.
 
