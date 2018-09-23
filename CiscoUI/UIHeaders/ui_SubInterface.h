@@ -171,6 +171,21 @@ public:
         ipInsideCheck->setObjectName(QStringLiteral("ipInsideCheck"));
         ipInsideCheck->setGeometry(QRect(160, 130, 101, 22));
         ipInsideCheck->setStyleSheet(QStringLiteral("color :rgb(0, 170, 255)"));
+        QWidget::setTabOrder(interfaceBox, shutBox);
+        QWidget::setTabOrder(shutBox, ipBox1);
+        QWidget::setTabOrder(ipBox1, ipBox2);
+        QWidget::setTabOrder(ipBox2, ipBox3);
+        QWidget::setTabOrder(ipBox3, ipBox4);
+        QWidget::setTabOrder(ipBox4, subBox1);
+        QWidget::setTabOrder(subBox1, subBox2);
+        QWidget::setTabOrder(subBox2, subBox3);
+        QWidget::setTabOrder(subBox3, subBox4);
+        QWidget::setTabOrder(subBox4, dotBox);
+        QWidget::setTabOrder(dotBox, ipInsideCheck);
+        QWidget::setTabOrder(ipInsideCheck, descripBox);
+        QWidget::setTabOrder(descripBox, clearBtn);
+        QWidget::setTabOrder(clearBtn, configBtn);
+        QWidget::setTabOrder(configBtn, exitBtn);
 
         retranslateUi(SubInterface);
 

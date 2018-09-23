@@ -377,6 +377,24 @@ border-color: rgb(0, 0, 0);</string>
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>interfaceBox</tabstop>
+  <tabstop>shutBox</tabstop>
+  <tabstop>ipBox1</tabstop>
+  <tabstop>ipBox2</tabstop>
+  <tabstop>ipBox3</tabstop>
+  <tabstop>ipBox4</tabstop>
+  <tabstop>subBox1</tabstop>
+  <tabstop>subBox2</tabstop>
+  <tabstop>subBox3</tabstop>
+  <tabstop>subBox4</tabstop>
+  <tabstop>dotBox</tabstop>
+  <tabstop>ipInsideCheck</tabstop>
+  <tabstop>descripBox</tabstop>
+  <tabstop>clearBtn</tabstop>
+  <tabstop>configBtn</tabstop>
+  <tabstop>exitBtn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
